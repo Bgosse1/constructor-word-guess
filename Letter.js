@@ -2,7 +2,7 @@ function Letter(character){
     this.character = character;
     this.guessed = false;
     this.isGussed = function(){
-        if(this.gussed === flase){
+        if(this.guessed === false){
             return "_";
         }
         else{

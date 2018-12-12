@@ -1,5 +1,6 @@
 let word = require('./Word.js');
 let inquirer = require('inquirer');
+let wordList = require('./WordList');
 
 function Game() {
     this.startGame = function () {
@@ -20,6 +21,9 @@ function Game() {
     this.validateGuess = function(userGuess){
         return /^[a-zA-Z]$/.test(userGuess);
     };
+    this.randomWord = function(){
+        let secretWord = wordList[Math.floor(Math.random() * words.length)];
+    }
 }
 
 let game = new Game();
