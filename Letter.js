@@ -1,19 +1,15 @@
 function Letter(character){
     this.character = character;
     this.guessed = false;
-    this.isGussed = function(){
-        if(this.guessed === false){
-            return "_";
-        }
-        else{
-            return this.character;
-        }
+
+    this.toString = function(){
+        return this.guessed ? this.character : "_";
     };
+
     this.gussedCorrectly = function(char){
         if(char === this.character){
             this.guessed = true;
         }
     };
 }
-
 module.exports = Letter;
