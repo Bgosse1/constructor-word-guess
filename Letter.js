@@ -7,7 +7,7 @@ function Letter(character){
     };
 
     this.gussedCorrectly = function(char){
-        if(char === this.character){
+        if(char.toLowerCase() === this.character.toLowerCase()){
             this.guessed = true;
         }
     };

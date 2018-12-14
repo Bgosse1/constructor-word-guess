@@ -18,5 +18,13 @@ function Word(secretWord) {
             this.lettersArray[j].gussedCorrectly(character);
         }
     };
+
+    function hasBeenGuessed(currentValue) {
+        return currentValue.guessed;
+      }
+
+    this.wordGuessed = function () {
+        return this.lettersArray.every(hasBeenGuessed);
+    }
 }
 module.exports = Word;
