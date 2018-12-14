@@ -1,7 +1,7 @@
-let word = require('./Word.js');
 let inquirer = require('inquirer');
-let wordList = require('./WordList');
 let chalk = require('chalk');
+let word = require('./Word.js');
+let wordList = require('./WordList');
 
 var guesses;
 var guessesLeft;
